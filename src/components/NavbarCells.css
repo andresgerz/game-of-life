@@ -1,16 +1,16 @@
 .navbar-wrapper {
 
-    width: 600px;
-    display: flex;
-    flex-flow: row wrap;
+  width: 600px;
+  display: flex;
+  flex-flow: row wrap;
 }
 
 
 .navbar-wrapper li {
-    width: 100px;
+  width: 100px;
 }
 
 .navbar-wrapper button {
-    background-color: #00F;
+  background-color: #00F;
 }
 
