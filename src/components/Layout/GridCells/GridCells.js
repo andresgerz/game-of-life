@@ -9,6 +9,7 @@ import './GridCells.css';
 const GridCells = ({ todos, onTodoClick }) => {
   console.log('todos');
   console.log(todos);
+
   return(          
     <ul className='container-grid'>
       {todos.map(cell =>  

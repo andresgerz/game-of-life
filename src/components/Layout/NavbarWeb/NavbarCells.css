@@ -1,14 +1,21 @@
 .navbar-wrapper {
 
-  width: 600px;
+  width: 700px;
   display: flex;
   flex-flow: row wrap;
 }
 
 
 .navbar-wrapper li {
-  width: 100px;
+  width: 108px;
 }
+
+
+.navbar-wrapper li:nth-child(2) {
+  width: 64px;
+  margin: 0 50px;
+}
+
 
 .navbar-wrapper button {
   background-color: #00F;

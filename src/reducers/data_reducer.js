@@ -32,10 +32,11 @@ const todos = (state = initialState, action) => {
 
     case 'START_TODO':
       console.log('start todo');
-      
+   
       return state.map((cell, i) => {
         
-        if ( i > 51 && i < 180 ) {
+        // inner cells
+        if ( i >= 51 && i <= 1448 ) {
           
           let environmentState = [
             state[i-51].life, state[i-50].life, state[i-49].life,
@@ -53,18 +54,31 @@ const todos = (state = initialState, action) => {
             };
           } 
 
-          if(cell.life === false && (countLife === 2 || countLife === 3 )) {
+          if(cell.life === false && (countLife === 3 )) {
             return {
               ...cell,
               life: !cell.life,
             };
           } 
         } 
+
+        // top and bottom borders cells
+        if ( i > 0 && i < 49 ) {
+          
+
+        }
+
+        // left and right borders cells
+        if ( i > 1450 && i < 1499 ) {
+          
+
+        }
+
+        // It lack 4 cells on the corner
+
         return cell;  
 
       })
-      
-
 
     case 'RESTART_TODO':
       console.log('RESTART_TODO');
@@ -73,7 +87,6 @@ const todos = (state = initialState, action) => {
     default:  
       return state;
   }
-
 }
 
 
