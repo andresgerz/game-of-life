@@ -43,9 +43,9 @@ const todos = (state = initialState, action) => {
             state[i-1].life, state[i+1].life, 
             state[i+51].life, state[i+50].life, state[i+49].life
           ]
-
+          
           let countLife = 0;
-          environmentState.map(elem => elem === true ? countLife++ : null)
+          environmentState.map(elem => elem === true ? countLife++ : countLife)
 
           if(cell.life === true && (countLife === 0 || countLife === 1 || countLife > 3)) {
             return {
@@ -64,13 +64,55 @@ const todos = (state = initialState, action) => {
 
         // top and bottom borders cells
         if ( i > 0 && i < 49 ) {
-          
+          let environmentState = [
+            state[i+1449].life, state[i+1450].life, state[i+1451].life,
+            state[i-1].life, state[i+1].life, 
+            state[i+51].life, state[i+50].life, state[i+49].life
+          ]
+
+          let countLife = 0;
+          environmentState.map(elem => elem === true ? countLife++ : countLife)
+
+          if(cell.life === true && (countLife === 0 || countLife === 1 || countLife > 3)) {
+            return {
+              ...cell,
+              life: !cell.life,
+            };
+          } 
+
+          if(cell.life === false && (countLife === 3 )) {
+            return {
+              ...cell,
+              life: !cell.life,
+            };
+          } 
 
         }
 
         // left and right borders cells
         if ( i > 1450 && i < 1499 ) {
-          
+          let environmentState = [
+            state[i-51].life, state[i-50].life, state[i-49].life,
+            state[i-1].life, state[i+1].life, 
+            state[i-1451].life, state[i-1450].life, state[i-1449].life
+          ]
+
+          let countLife = 0;
+          environmentState.map(elem => elem === true ? countLife++ : countLife)
+
+          if(cell.life === true && (countLife === 0 || countLife === 1 || countLife > 3)) {
+            return {
+              ...cell,
+              life: !cell.life,
+            };
+          } 
+
+          if(cell.life === false && (countLife === 3 )) {
+            return {
+              ...cell,
+              life: !cell.life,
+            };
+          } 
 
         }
 

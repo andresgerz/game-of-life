@@ -12,9 +12,9 @@ const GridCells = ({ todos, onTodoClick }) => {
 
   return(          
     <ul className='container-grid'>
-      {todos.map(cell =>  
+      {todos.map((cell, index) =>  
         <Cell
-          key={cell.id}
+          key={index}
           {...cell}
           onClick={() => onTodoClick(cell.id)}
         />
