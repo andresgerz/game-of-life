@@ -117,6 +117,110 @@ const todos = (state = initialState, action) => {
         }
 
         // It lack 4 cells on the corner
+        // left top corner
+        if (i === 0) {
+          let environmentState = [
+            state[i+1499].life, state[i+1450].life, state[i+1451].life,
+            state[i+49].life, state[i+1].life, 
+            state[i+49].life, state[i+50].life, state[i+51].life
+          ]
+
+          let countLife = 0;
+          environmentState.map(elem => elem === true ? countLife++ : countLife)
+
+          if(cell.life === true && (countLife === 0 || countLife === 1 || countLife > 3)) {
+            return {
+              ...cell,
+              life: !cell.life,
+            };
+          } 
+
+          if(cell.life === false && (countLife === 3 )) {
+            return {
+              ...cell,
+              life: !cell.life,
+            };
+        } 
+        }
+
+
+        // right top corner
+        if (i === 49) {
+          let environmentState = [
+            state[i+1449].life, state[i+1450].life, state[i+1401].life,
+            state[i-1].life, state[i-49].life, 
+            state[i+49].life, state[i+50].life, state[i+1].life
+          ]
+
+          let countLife = 0;
+          environmentState.map(elem => elem === true ? countLife++ : countLife)
+
+          if(cell.life === true && (countLife === 0 || countLife === 1 || countLife > 3)) {
+            return {
+              ...cell,
+              life: !cell.life,
+            };
+          } 
+
+          if(cell.life === false && (countLife === 3 )) {
+            return {
+              ...cell,
+              life: !cell.life,
+            };
+        } 
+        }
+
+        // left bottom corner
+        if (i === 1450) {
+          let environmentState = [
+            state[i-1].life, state[i-50].life, state[i-49].life,
+            state[i+49].life, state[i+1].life, 
+            state[i-1401].life, state[i-1450].life, state[i-1449].life
+          ]
+
+          let countLife = 0;
+          environmentState.map(elem => elem === true ? countLife++ : countLife)
+
+          if(cell.life === true && (countLife === 0 || countLife === 1 || countLife > 3)) {
+            return {
+              ...cell,
+              life: !cell.life,
+            };
+          } 
+
+          if(cell.life === false && (countLife === 3 )) {
+            return {
+              ...cell,
+              life: !cell.life,
+            };
+        } 
+        }
+
+        // right bottom corner
+        if (i === 1499) {
+          let environmentState = [
+            state[i-51].life, state[i-50].life, state[i-99].life,
+            state[i-1].life, state[i-49].life, 
+            state[i-1451].life, state[i-1450].life, state[i-1499].life
+          ]
+
+          let countLife = 0;
+          environmentState.map(elem => elem === true ? countLife++ : countLife)
+
+          if(cell.life === true && (countLife === 0 || countLife === 1 || countLife > 3)) {
+            return {
+              ...cell,
+              life: !cell.life,
+            };
+          } 
+
+          if(cell.life === false && (countLife === 3 )) {
+            return {
+              ...cell,
+              life: !cell.life,
+            };
+        } 
+        }
 
         return cell;  
 
