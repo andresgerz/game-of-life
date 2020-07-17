@@ -3,11 +3,12 @@
   width: 700px;
   display: flex;
   flex-flow: row wrap;
+  margin: 25px;
 }
 
 
 .navbar-wrapper li {
-  width: 108px;
+  width: 140px;
 }
 
 
@@ -15,9 +16,3 @@
   width: 64px;
   margin: 0 50px;
 }
-
-
-.navbar-wrapper button {
-  background-color: #00F;
-}
-

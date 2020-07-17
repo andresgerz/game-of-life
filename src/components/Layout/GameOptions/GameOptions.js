@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { restart, start } from '../../../actions/index';
+import { Button } from 'react-bootstrap';
 
-import './NavbarCells.css'
+import './GameOptions.css'
 
-const NavbarWeb = ({ todos, onRestart, onStart }) => {
+const GameOptions = ({ todos, onRestart, onStart }) => {
 
   const [intervalID, setIntervalID] = useState(0);
   
@@ -33,11 +34,11 @@ const NavbarWeb = ({ todos, onRestart, onStart }) => {
 
   return(
     <ul className='navbar-wrapper'>
-      <li><button 
+      <li><Button 
         onClick={() => setIntervalNroTimes(() => {onStart(todos)}, 250, 100)}
-      >Iniciar/Reiniciar</button></li>
-      <li><button onClick={() => onStop()}>Detener</button></li>
-      <li><button onClick={() => onRestart()}>Borrar todo</button></li>
+      >Iniciar/Reiniciar</Button></li>
+      <li><Button onClick={() => onStop()}>Detener</Button></li>
+      <li><Button onClick={() => onRestart()}>Borrar todo</Button></li>
     </ul>
   )
 }
@@ -62,4 +63,4 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(NavbarWeb);
+export default connect(mapStateToProps, mapDispatchToProps)(GameOptions);

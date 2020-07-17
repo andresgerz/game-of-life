@@ -2,14 +2,32 @@ import React from 'react'
 
 import './App.css'
 import Layout from './components/Layout/Layout'
+import Home from './components/Home/Home'
+import NavbarWeb from './components/NavbarWeb'
 
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
 
 function App() {
   return (
     
-    <div className='App'>
-      <Layout />
-    </div>
+    <Router>  
+      <div className="App">
+        <NavbarWeb />
+
+        <Switch >
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route exact path="/layout">
+            <Layout />
+          </Route>
+        </Switch>
+      </div>
+    </Router>  
   );
 }
 
