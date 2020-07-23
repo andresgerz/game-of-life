@@ -7,7 +7,7 @@ const Cell = ({ onClick, life}) => {
 
   // Llena o no el circulo de azul
   return (
-    <li onClick={onClick}>
+    <li className="cell-wrapper" onClick={onClick}>
       <svg>
         <circle
           style={{fill: life? '#00F' : 'none'}}

@@ -1,3 +1,15 @@
 .home-wrapper {
-  padding: 0px 50px;  
+  padding: 50px;  
+}
+
+
+.game-points li {
+  width: 800px;
+}
+
+
+.grid-wrapper {
+  width: 130px;
+  display: flex;
+  flex-flow: row wrap;
 }

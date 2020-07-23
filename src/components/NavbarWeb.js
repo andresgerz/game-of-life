@@ -11,7 +11,7 @@ const NavbarWeb = () => (
   
   <div className="navbarweb-wrapper">
    <Navbar bg="primary" variant="dark">
-     <Navbar.Brand>Game of life</Navbar.Brand>
+     <Navbar.Brand className="font-weight-bold">Game of life</Navbar.Brand>
      <Nav className="mr-auto">
        <Nav.Link href="#home"><Link to="/">Home</Link></Nav.Link>
        <Nav.Link href="#layout"><Link to="/layout">Play</Link></Nav.Link>
