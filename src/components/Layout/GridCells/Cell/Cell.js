@@ -11,7 +11,7 @@ const Cell = ({ onClick, life}) => {
       <svg>
         <circle
           style={{fill: life? '#00F' : 'none'}}
-          cx={15} cy={15} r={12}
+          cx={12} cy={12} r={12}
         />
       </svg>
     </li>  

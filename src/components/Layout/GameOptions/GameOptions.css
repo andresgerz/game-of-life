@@ -1,18 +1,11 @@
-.navbar-wrapper {
-
-  width: 700px;
+.options-container {
   display: flex;
   flex-flow: row wrap;
   margin: 25px;
+  justify-content: flex-start;
 }
 
 
-.navbar-wrapper li {
-  width: 140px;
-}
-
-
-.navbar-wrapper li:nth-child(2) {
-  width: 64px;
-  margin: 0 50px;
+.options-container div:nth-child(2) {
+  margin: 0 10px;
 }

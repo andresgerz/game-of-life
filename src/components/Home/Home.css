@@ -3,8 +3,9 @@
 }
 
 
-.game-points li {
-  width: 800px;
+.points-wrapper {
+  display: flex;
+  flex-flow: row wrap;
 }
 
 

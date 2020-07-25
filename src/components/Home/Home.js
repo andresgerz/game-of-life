@@ -23,7 +23,7 @@ const Home = () => (
             Todas las células se actualizan simultáneamente en cada turno, 
             siguiendo estas reglas:
       </p>
-      <ul className="game-points">
+      <ul className="points-wrapper">
         <li>Una célula muerta con exactamente 3 células vivas vecinas "nace" 
         (es decir, al turno siguiente estará viva). 
         </li>

@@ -5,10 +5,9 @@ import Cell from '../../Layout/GridCells/Cell/Cell';
 const SmallGridCell = (lifeArr) => {
 
   const [exampleCells, setExampleCells] = useState([true,true,true,true,true,true,true,true,true]);
-  console.log("SmallGridCell");
-  console.log(exampleCells);
-
-  /* return(
+ 
+  
+  return(
     <div>
       <ol className="grid-wrapper">{
         exampleCells.map((cell, i) => 
@@ -19,7 +18,7 @@ const SmallGridCell = (lifeArr) => {
           )}
       </ol>    
     </div>
-  ) */
+  )
 }
 
 export default SmallGridCell;

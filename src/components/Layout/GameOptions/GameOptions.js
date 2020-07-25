@@ -33,13 +33,13 @@ const GameOptions = ({ todos, onRestart, onStart }) => {
 
 
   return(
-    <ul className='navbar-wrapper'>
-      <li><Button 
+    <div className='options-container'>
+      <div className='item'><Button 
         onClick={() => setIntervalNroTimes(() => {onStart(todos)}, 250, 100)}
-      >Iniciar/Reiniciar</Button></li>
-      <li><Button onClick={() => onStop()}>Detener</Button></li>
-      <li><Button onClick={() => onRestart()}>Borrar todo</Button></li>
-    </ul>
+      >Iniciar/Reiniciar</Button></div>
+      <div className='item'><Button onClick={() => onStop()}>Detener</Button></div>
+      <div className='item'><Button onClick={() => onRestart()}>Borrar todo</Button></div>
+    </div>
   )
 }
 
