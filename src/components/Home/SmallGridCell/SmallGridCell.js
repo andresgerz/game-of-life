@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+/* import React, { useState } from 'react';
 import Cell from '../../Layout/GridCells/Cell/Cell';
 
 
 const SmallGridCell = (lifeArr) => {
 
-  const [exampleCells, setExampleCells] = useState([true,true,true,true,true,true,true,true,true]);
+  //const [exampleCells, setExampleCells] = useState([true,true,true,true,true,true,true,true,true]);
  
   
   return(
@@ -21,4 +21,4 @@ const SmallGridCell = (lifeArr) => {
   )
 }
 
-export default SmallGridCell;
+export default SmallGridCell; */

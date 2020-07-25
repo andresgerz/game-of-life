@@ -2,7 +2,6 @@ import React from 'react';
 
 import './Home.css';
 
-import SmallGridCell from './SmallGridCell/SmallGridCell';
 
 const Home = () => (
 
@@ -23,18 +22,14 @@ const Home = () => (
             Todas las células se actualizan simultáneamente en cada turno, 
             siguiendo estas reglas:
       </p>
-      <ul className="points-wrapper">
-        <li>Una célula muerta con exactamente 3 células vivas vecinas "nace" 
-        (es decir, al turno siguiente estará viva). 
-        </li>
-        <li>Una célula viva con 2 o 3 células vecinas vivas se mantiene viva. 
-        </li>
-        <li>Una célula viva con menos de 2 células vecinas vivas muede de 
-        "soledad".      
-        </li>
-        <li>Una célula viva con más de 3 células vecinas vivas muere por 
-        "superpoblación".
-        </li>
+      <ul className="points-container">
+        <li className="item">Una célula muerta con exactamente 3 células vivas vecinas "nace" 
+        (es decir, al turno siguiente estará viva).</li>
+        <li className="item">Una célula viva con 2 o 3 células vecinas vivas se mantiene viva.</li>
+        <li className="item">Una célula viva con menos de 2 células vecinas vivas muede de 
+        "soledad".</li>
+        <li className="item">Una célula viva con más de 3 células vecinas vivas muere por 
+        "superpoblación".</li>
       </ul>
     {/*   <SmallGridCell lifeArr={[false,true,true,false,false,false,true,true,false]} />
       <SmallGridCell />
@@ -45,8 +40,7 @@ const Home = () => (
             */}  
       
       <p>El usuario puede activar o desactivar celulas. Cuando el usuario 
-      presiona <strong>Iniciar/Reiniciar</strong> la simulación comienza. Cuando presiona
-      <strong>Detener</strong> la simulación se pone en pausa, pudiendo volver a 
+      presiona <strong>Iniciar/Reiniciar</strong> la simulación comienza. Cuando presiona <strong> Detener</strong> la simulación se pone en pausa, pudiendo volver a 
       reiniciar desde donde inició con el botón <strong>Iniciar/Reiniciar</strong>.
       Cuando presiona <strong>Borrar todo</strong> el tablero se limpia y las generaciones
       vuelven a cero. El indicador de Generación muestra el turno actual. Cada turno de la 

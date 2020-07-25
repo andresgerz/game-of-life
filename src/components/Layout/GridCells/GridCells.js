@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import { toggleTodo } from '../../../actions/index';
 import { connect } from 'react-redux';
 
@@ -7,8 +7,6 @@ import Cell from './Cell/Cell'
 import './GridCells.css';
 
 const GridCells = ({ todos, onTodoClick }) => {
-  console.log('todos');
-  console.log(todos);
 
   return(          
     <ul className='container-grid'>

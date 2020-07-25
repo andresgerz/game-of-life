@@ -3,11 +3,14 @@
 }
 
 
-.points-wrapper {
+.points-container {
   display: flex;
   flex-flow: row wrap;
 }
 
+.points-container li {
+  width: 100%;
+}
 
 .grid-wrapper {
   width: 130px;

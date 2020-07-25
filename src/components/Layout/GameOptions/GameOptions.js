@@ -27,7 +27,6 @@ const GameOptions = ({ todos, onRestart, onStart }) => {
 
 
   const onStop = () => {
-    console.log('top');
     clearInterval(intervalID);
   }
 

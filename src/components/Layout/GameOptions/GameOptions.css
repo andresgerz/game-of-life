@@ -1,7 +1,7 @@
 .options-container {
   display: flex;
   flex-flow: row wrap;
-  margin: 25px;
+  margin: 40px;
   justify-content: flex-start;
 }
 
