@@ -1,4 +1,5 @@
 import React from 'react';
+import SmallGridCell from './SmallGridCell/SmallGridCell';
 
 import './Home.css';
 
@@ -8,7 +9,8 @@ const Home = () => (
     <div className="home-wrapper">
       <h1>El juego de la vida</h1>
       <br/>
-      <p>Se trata de un juego de cero jugadores, lo que quiere decir que su 
+      <p>El juego de la vida es un autómata celular diseñado por el matemático británico John      Horton Conway en 1970.
+         Se trata de un juego de cero jugadores, lo que quiere decir que su 
          evolución está determinada por el estado inicial y no necesita 
          ninguna entrada de datos posterior. El "tablero de juego" es una 
          malla plana formada por cuadrados (las "células") que se extiende por
@@ -31,13 +33,72 @@ const Home = () => (
         <li className="item">Una célula viva con más de 3 células vecinas vivas muere por 
         "superpoblación".</li>
       </ul>
-    {/*   <SmallGridCell lifeArr={[false,true,true,false,false,false,true,true,false]} />
-      <SmallGridCell />
-      <SmallGridCell />
-      <SmallGridCell />
-      <SmallGridCell />
-      <SmallGridCell />
-            */}  
+      <br />
+      <p>Ejemplos de estos cambios de estado por turno serían:</p>
+      <br />
+      <div className="examples-wrapper">
+        <div className="example-1">
+          <div className="item">
+            <h1>T<sub>0</sub></h1>
+            <SmallGridCell lifeArr={[false,false,false,false,true,false,false,false,false]} />
+          </div>           
+          <div className="item">
+            <h1>T<sub>1</sub></h1>
+            <SmallGridCell lifeArr={[false,false,false,false,false,false,false,false,false]} />
+          </div>
+          <div className="item"><p>Una célula viva sin ningún vecino vivo, muere.</p></div>          
+        </div>
+          
+        <div className="example-2">
+          <div className="item">
+            <SmallGridCell lifeArr={[false,false,false,true,true,true,false,false,false]} />
+            <div className="letters">
+              <p>A</p>
+              <p>B</p>
+              <p>C</p>
+            </div>
+          </div>         
+          <div className="item">
+            <SmallGridCell lifeArr={[false,true,false,false,true,false,false,true,false]} />
+            <div className="letters">
+              <p>D</p>
+              <p>E</p>
+            </div>
+          </div>       
+          <div className="item"><p>Las células A y C mueren por tener un solo vecino vivo. La célula B sobrevive por tener 2 vecinos vivos.</p>
+          <p>Las células D y E nacen por tener 3 vecinos vivos.</p>
+          </div>         
+        </div>
+          
+        <div className="example-3">
+          <div className="item">
+            <SmallGridCell lifeArr={[true,true,false,true,true,true,false,false,false]} />
+          </div>       
+          <div className="item">
+            <SmallGridCell lifeArr={[true,false,true,true,false,true,false,true,false]} />
+            <div className="letters-container">
+              <div className="item">A</div>
+              <div className="item">B</div>
+              <div className="item">C</div>
+              
+              <div className="item">D</div>
+              <div className="item">E</div>
+              <div className="item">F</div>
+              
+              <div className="item">G</div>
+              <div className="item">H</div>
+              <div className="item">I</div>
+            </div>    
+          </div>
+          <div className="item">
+            <p>A y D sobrevive por tener 3 vecinos vivos.</p>
+            <p>B y E mueren por sobrepoblación.</p>
+            <p>C y H nacen por tener 3 vecinos vivos.</p>
+            <p>F sobrevive por tener 2 vecinos vivos.</p>
+            <p>G e I no cambian de estado.</p>
+          </div>         
+        </div>
+      </div>
       
       <p>El usuario puede activar o desactivar celulas. Cuando el usuario 
       presiona <strong>Iniciar/Reiniciar</strong> la simulación comienza. Cuando presiona <strong> Detener</strong> la simulación se pone en pausa, pudiendo volver a 

@@ -8,12 +8,73 @@
   flex-flow: row wrap;
 }
 
+
 .points-container li {
   width: 100%;
 }
+
 
 .grid-wrapper {
   width: 130px;
   display: flex;
   flex-flow: row wrap;
+}
+
+
+.examples-wrapper .item {
+  float: left;
+  color: #000;
+}
+
+
+.examples-wrapper .item h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+.example-1, .example-2, .example-3 {
+  margin-bottom: 50px;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.examples-wrapper .item:nth-child(3) p {
+  width: 200px;
+  margin-left: 50px;
+}
+
+
+.example-2 .item:first-child .letters p {
+  float: left;
+  margin-right: 20px;
+  position: relative;
+  bottom: 75px;
+  left: 45px;
+}
+
+
+.example-2 .item:nth-child(2) .letters p {
+  float: top;
+  margin-bottom: 35px;
+  position: relative;
+  bottom: 105px;
+  left: 78px;
+}
+
+
+.example-3 .letters-container {
+  float: left;
+  margin-bottom: 35px;
+  position: relative;
+  bottom: 105px;
+  left: 47px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 10px);
+  grid-template-rows: repeat(3, 10px);
+  column-gap: 20px;
+  row-gap: 20px;
 }
