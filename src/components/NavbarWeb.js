@@ -10,8 +10,8 @@ const NavbarWeb = () => (
    <Navbar bg="primary" variant="dark">
      <Navbar.Brand className="font-weight-bold">Game of life</Navbar.Brand>
      <Nav className="mr-auto">
-       <Nav.Link href="#home"><Link to="/">Home</Link></Nav.Link>
-       <Nav.Link href="#layout"><Link to="/layout">Play</Link></Nav.Link>
+       <Nav.Link href="/"><Link to="/">Home</Link></Nav.Link>
+       <Nav.Link href="/play"><Link to="/play">Play</Link></Nav.Link>
      </Nav>
    </Navbar>
   </div>

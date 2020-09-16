@@ -18,11 +18,11 @@ function App() {
       <div className="App">
         <NavbarWeb />
 
-        <Switch >
+        <Switch>
           <Route exact path="/">
             <Home />
           </Route>
-          <Route exact path="/layout">
+          <Route path="/play">
             <Layout />
           </Route>
         </Switch>
